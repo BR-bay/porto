@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Siti Sela Putri</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(to right, #6a11cb, #2575fc);
+            color: white;
+            overflow-x: hidden;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        header {
+            text-align: center;
+            padding: 50px 0;
+            animation: fadeIn 2s ease-in;
+        }
+        header h1 {
+            font-size: 3em;
+            margin: 0;
+            font-weight: 600;
+        }
+        header p {
+            font-size: 1.2em;
+            margin: 10px 0 0;
+            font-weight: 300;
+        }
+        .about {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 20px;
+            margin: 40px auto;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            animation: slideUp 1.5s ease-out;
+        }
+        .about h2 {
+            text-align: center;
+            font-size: 2.5em;
+        }
+        .about p {
+            font-size: 1.2em;
+            line-height: 1.8;
+            text-align: justify;
+        }
+        .skills {
+            margin: 40px auto;
+            text-align: center;
+            animation: fadeIn 2s ease-in;
+        }
+        .skills h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+        .skills button {
+            font-size: 1.2em;
+            margin: 10px;
+            padding: 10px 20px;
+            background: #ffdf6c;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s, transform 0.3s;
+        }
+        .skills button:hover {
+            background: #ffeaa6;
+            transform: scale(1.05);
+        }
+        .details {
+            display: none;
+            margin: 20px auto;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+            text-align: left;
+            animation: slideDown 1s ease-out;
+        }
+        .details h3 {
+            margin-top: 0;
+        }
+        .contact {
+            text-align: center;
+            margin-top: 30px;
+        }
+        .contact a {
+            color: #ffdf6c;
+            text-decoration: none;
+            font-size: 1.2em;
+            margin: 0 10px;
+            display: inline-block;
+            transition: transform 0.3s;
+        }
+        .contact a:hover {
+            transform: scale(1.1);
+        }
+        footer {
+            text-align: center;
+            padding: 20px 0;
+            background: rgba(0, 0, 0, 0.2);
+        }
+        footer p {
+            margin: 0;
+            font-size: 0.9em;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        @keyframes slideUp {
+            from {
+                transform: translateY(50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+        @keyframes slideDown {
+            from {
+                transform: translateY(-20px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+    </style>
+    <script>
+        function showDetails(skill) {
+            const sections = document.querySelectorAll('.details');
+            sections.forEach(section => section.style.display = 'none');
+            document.getElementById(skill).style.display = 'block';
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Siti Sela Putri</h1>
+            <p>Professional with Expertise in Office Applications and Data Management</p>
+        </header>
+        <div class="about">
+            <h2>About Me</h2>
+            <p>I am Siti Sela Putri, a highly dedicated and detail-oriented professional with extensive experience in document management, typing, data analysis, and organization. Passionate about helping individuals and businesses achieve efficiency through my skills, I ensure every project is completed with precision and creativity. My commitment to excellence has enabled me to deliver high-quality results that exceed expectations.</p>
+        </div>
+        <div class="skills">
+            <h2>Skills</h2>
+            <button onclick="showDetails('word')">Microsoft Word</button>
+            <button onclick="showDetails('typing')">Typing</button>
+            <button onclick="showDetails('excel')">Microsoft Excel</button>
+            <button onclick="showDetails('dataEntry')">Data Entry</button>
+        </div>
+        <div id="word" class="details">
+            <h3>Microsoft Word</h3>
+            <p>Proficient in creating and managing professional documents with advanced formatting, styles, and templates. I excel at designing visually appealing reports, proposals, and presentations while ensuring accuracy and consistency. My expertise also includes creating custom templates to save time and improve document uniformity.</p>
+        </div>
+        <div id="typing" class="details">
+            <h3>Typing</h3>
+            <p>Equipped with exceptional typing speed (80+ WPM) and precision, I specialize in transcribing documents, drafting professional correspondence, and inputting large volumes of data efficiently. My ability to handle tight deadlines while maintaining high accuracy makes me a valuable asset in fast-paced environments.</p>
+        </div>
+        <div id="excel" class="details">
+            <h3>Microsoft Excel</h3>
+            <p>Expert in utilizing Microsoft Excel for data analysis, reporting, and visualization. I am skilled in creating advanced formulas, dynamic pivot tables, and insightful charts that drive decision-making. My experience also includes automating repetitive tasks with macros, ensuring accuracy and saving time.</p>
+        </div>
+        <div id="dataEntry" class="details">
+            <h3>Data Entry</h3>
+            <p>With a meticulous eye for detail, I provide accurate and efficient data entry services. Whether managing databases, updating records, or organizing information, I prioritize data integrity and confidentiality. My experience spans various industries, enabling me to adapt quickly to different systems and processes.</p>
+        </div>
+        <div class="contact">
+            <p>Contact Me:</p>
+            <a href="tel:+6289509958746">📞 +62 89509958746</a>
+            <a href="mailto:sitiselap@gmail.com">✉️ sitiselap@gmail.com</a>
+        </div>
+        <footer>
+            <p>&copy; 2025 Siti Sela Putri. All Rights Reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>
